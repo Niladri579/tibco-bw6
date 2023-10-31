@@ -1,0 +1,31 @@
+
+#this is dev pipelines....
+
+name: Tibco Workflow
+
+on:
+  
+  pull_request:
+    branches: [ dev ]
+    
+jobs:
+  build:
+    runs-on: [self-hosted,tibco,esb,bw6]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: 11.0.16+8
+          distribution: 'adopt'
+
+          
+      - name: Build BW6 Application
+        run: |
+            mvn clean install -B -X -f ${{ github.workspace }}\BWCE_Hello.parent\pom.xml -s ${{ github.workspace }}\BWCE_Hello.parent\settings.xml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+ 
