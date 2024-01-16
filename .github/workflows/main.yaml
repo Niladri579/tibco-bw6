@@ -1,7 +1,9 @@
 name: Build and Package BW6 Application
 
 on:
-  workflow_dispatch:  # Allows manual triggering of the workflow
+  
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
