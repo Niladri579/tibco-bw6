@@ -37,13 +37,6 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
-    - name: Publish EAR Artifact to GitHub Packages
-      run: |
-        echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-        docker build -t ghcr.io/${{ github.repository }}/bw6-application:${{ github.run_id }} .
-        docker push ghcr.io/${{ github.repository }}/bw6-application:${{ github.run_id }}
-
-    - name: Clean up
-      run: |
+   
         rm -rf BWCE_Hello_World/BWCE_Hello.parent/.m2
 
