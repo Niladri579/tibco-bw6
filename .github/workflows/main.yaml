@@ -31,10 +31,5 @@ jobs:
       env:
         MAVEN_OPTS: '-Dmaven.repo.local=./.m2/repository'
 
-    - name: Login to GitHub Packages
-      uses: docker://ghcr.io/actions/setup-java
-      with:
-        distribution: 'adopt'
-        java-version: '11'
 
 
