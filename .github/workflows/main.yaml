@@ -37,6 +37,4 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
-   
-        rm -rf BWCE_Hello_World/BWCE_Hello.parent/.m2
 
