@@ -1,0 +1,41 @@
+name: Build and Package BW6 Application
+
+on:
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '11'
+
+    - name: Set up Maven
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'apache-maven'
+        java-version: '3.8.4'
+
+    - name: Build BW6 Application
+      run: |
+        cd [YourBW6AppFolder]
+        mvn clean install -P mavenize -f BWCE_Hello_World/BWCE_Hello.parent
+        mvn bw6:bw6-export
+
+    - name: Package and Publish EAR Artifact
+      run: |
+        cd YourBW6AppFolder/target
+        echo "BW6 Application EAR file successfully built and packaged."
+
+    - name: Upload to GitHub Packages
+      uses: actions/upload-artifact@v2
+      with:
+        name: bw6-application
+        path: 'YourBW6AppFolder/target/*.ear'
