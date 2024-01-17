@@ -16,7 +16,7 @@
       <artifactId>com.tibco.bw.palette.shared</artifactId>
       <version>6.2.1300</version>
       <scope>system</scope>
-      <systemPath>C:\Users\ndey\.m2\repository\com\tibco\plugins\com.tibco.bw.palette.shared\6.2.1300\com.tibco.bw.palette.shared-6.2.1300.jar</systemPath>
+      <systemPath>${project.basedir}/.m2/repository/com/tibco/plugins/com.tibco.bw.palette.shared/6.2.1300/com.tibco.bw.palette.shared-6.2.1300.jar</systemPath>
     </dependency>
   </dependencies>
   <build>
