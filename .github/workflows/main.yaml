@@ -20,11 +20,12 @@ jobs:
     - name: Install Local Dependency
       run: |
         mvn install:install-file \
-          -Dfile=${project.basedir}/.m2/repository/com/tibco/plugins/com.tibco.bw.palette.shared/6.2.1300/com.tibco.bw.palette.shared-6.2.1300.jar \
+          -Dfile=$GITHUB_WORKSPACE/.m2/repository/com/tibco/plugins/com.tibco.bw.palette.shared/6.2.1300/com.tibco.bw.palette.shared-6.2.1300.jar \
           -DgroupId=com.tibco.plugins \
           -DartifactId=com.tibco.bw.palette.shared \
           -Dversion=6.2.1300 \
           -Dpackaging=jar
+
           
     - name: Build and Package BW6 Application
       run: |
