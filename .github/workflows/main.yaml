@@ -17,6 +17,9 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
+    - name: Print Contents of Directory
+      run: ls -R ${HOME}/.m2/repository/com/tibco/plugins/com.tibco.bw.palette.shared/6.2.1300/
+
     - name: Install Local Dependency
       run: |
         mvn install:install-file -Dfile=${HOME}/.m2/repository/com/tibco/plugins/com.tibco.bw.palette.shared/6.2.1300/com.tibco.bw.palette.shared-6.2.1300.jar -DgroupId=com.tibco.plugins -DartifactId=com.tibco.bw.palette.shared -Dversion=6.2.1300 -Dpackaging=jar
