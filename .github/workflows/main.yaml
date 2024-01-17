@@ -25,7 +25,7 @@ jobs:
           -DartifactId=com.tibco.bw.palette.shared \
           -Dversion=6.2.1300 \
           -Dpackaging=jar
-    
+      shell: bash
       env:
         JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.21-9/x64
 
