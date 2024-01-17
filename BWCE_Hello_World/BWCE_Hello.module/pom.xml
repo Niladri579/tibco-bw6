@@ -15,7 +15,7 @@
       <groupId>com.tibco.plugins</groupId>
       <artifactId>com.tibco.bw.palette.shared</artifactId>
       <version>6.2.1300</version>
-      <scope>provided</scope>
+     
     </dependency>
   </dependencies>
   <build>
