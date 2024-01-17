@@ -17,20 +17,6 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
-    - name: Install Local Dependency
-      run: |
-        mvn install:install-file \
-          -Dfile=C:/Users/ndey/.m2/repository/com/tibco/plugins/com.tibco.bw.palette.shared/6.2.1300/com.tibco.bw.palette.shared-6.2.1300.jar \
-          -DgroupId=com.tibco.plugins \
-          -DartifactId=com.tibco.bw.palette.shared \
-          -Dversion=6.2.1300 \
-          -Dpackaging=jar
-      shell: bash
-      env:
-        JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.21-9/x64
-
-
-
     - name: Build and Package BW6 Application
       run: |
         cd BWCE_Hello_World/BWCE_Hello.parent
