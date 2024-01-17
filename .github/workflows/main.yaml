@@ -21,7 +21,7 @@ jobs:
       run: ls -R $GITHUB_WORKSPACE
 
     - name: create folder
-      run: mkdir /home/runner/work/tibco-bw6/tibco-bw6/BWCE_Hello_World/com.tibco.bw.palette.shared
+      run: mkdir /home/runner/work/com.tibco.bw.palette.shared
 
     - name: Print Workspace Contents
       run: ls -R $GITHUB_WORKSPACE
