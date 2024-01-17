@@ -24,7 +24,7 @@ jobs:
       run: mkdir /home/runner/work/com.tibco.bw.palette.shared
 
     - name: Print Workspace Contents
-      run: ls -R $GITHUB_WORKSPACE
+      run: pwd /home/runner/work
       
     - name: Install Local Dependency
       run: |
