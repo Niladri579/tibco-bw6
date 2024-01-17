@@ -19,7 +19,6 @@ jobs:
 
     - name: Build and Package BW6 Application
       run: |
-        mvn install:install-file -Dfile=C:\Users\ndey\.m2\repository\com\tibco\plugins\com.tibco.bw.palette.shared\6.2.1300 -DgroupId=com.tibco.plugins -DartifactId=com.tibco.bw.palette.shared -Dversion=6.2.1300 -Dpackaging=jar
         cd BWCE_Hello_World/BWCE_Hello.parent
         mvn clean package -P mavenize
       env:
