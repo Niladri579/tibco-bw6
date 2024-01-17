@@ -17,6 +17,9 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
+    - name: Print Workspace Contents
+      run: ls -R $GITHUB_WORKSPACE
+
     - name: Install Local Dependency
       run: |
         mvn install:install-file \
