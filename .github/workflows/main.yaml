@@ -33,7 +33,7 @@ jobs:
     - name: Build and Package BW6 Application
       run: |
         cd BWCE_Hello_World/BWCE_Hello.parent
-        mvn clean package -P mavenize
+        mvn clean install
       env:
         MAVEN_OPTS: '-Dmaven.repo.local=./.m2/repository'
 
