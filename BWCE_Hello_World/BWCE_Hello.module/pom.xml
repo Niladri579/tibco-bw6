@@ -16,7 +16,7 @@
       <artifactId>com.tibco.bw.palette.shared</artifactId>
       <version>6.2.1300</version>
       <scope>system</scope>
-      <systemPath/home/runner/work/tibco-bw6/tibco-bw6/BWCE_Hello_World/BWCE_Hello.module/com.tibco.bw.palette.shared-6.2.1300.jar</systemPath>
+      <systemPath>/home/runner/work/tibco-bw6/tibco-bw6/BWCE_Hello_World/BWCE_Hello.module/com.tibco.bw.palette.shared-6.2.1300.jar</systemPath>
     </dependency>
   </dependencies>
   <build>
