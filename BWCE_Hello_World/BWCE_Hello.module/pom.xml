@@ -10,13 +10,20 @@
   </parent>
   <artifactId>BWCE_Hello.module</artifactId>
   <packaging>bwmodule</packaging>
+  <repositories>
+    <!-- Add a repository pointing to your local repository -->
+    <repository>
+      <id>local-repo</id>
+      <url>file://home/runner/work/tibco-bw6/tibco-bw6/BWCE_Hello_World/BWCE_Hello.module</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>com.tibco.plugins</groupId>
       <artifactId>com.tibco.bw.palette.shared</artifactId>
       <version>6.2.1300</version>
       <scope>system</scope>
-      <systemPath>${project.basedir}/.m2/repository/com/tibco/plugins/com.tibco.bw.palette.shared/6.2.1300/com.tibco.bw.palette.shared-6.2.1300.jar</systemPath>
+      <systemPath/home/runner/work/tibco-bw6/tibco-bw6/BWCE_Hello_World/BWCE_Hello.module/.m2/repository/com/tibco/plugins/com.tibco.bw.palette.shared/6.2.1300/com.tibco.bw.palette.shared-6.2.1300.jar</systemPath>
     </dependency>
   </dependencies>
   <build>
