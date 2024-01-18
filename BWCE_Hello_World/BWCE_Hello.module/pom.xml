@@ -10,9 +10,6 @@
   </parent>
   <artifactId>BWCE_Hello.module</artifactId>
   <packaging>bwmodule</packaging>
-  <repositories>
-    <!-- Add a repository pointing to your local repository -->
-
   <dependencies>
     <dependency>
       <groupId>com.tibco.plugins</groupId>
