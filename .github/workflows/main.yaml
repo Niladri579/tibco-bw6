@@ -19,26 +19,15 @@ jobs:
 
     - name: Print Workspace Contents
       run: ls -R $GITHUB_WORKSPACE
-
-    - name: create folder
-      run: mkdir /home/runner/work/com.tibco.bw.palette.shared
-
-    - name: Print Workspace Contents
-      run: pwd /home/runner/work
       
     - name: Install Local Dependency
       run: |
-        echo "Current directory: $(pwd)"
-        echo "Contents of the workspace:"
-        ls -R $GITHUB_WORKSPACE
-    
-        mvn install:install-file \
-          -Dfile=$GITHUB_WORKSPACE/.m2/repository/com/tibco/plugins/com.tibco.bw.palette.shared/6.2.1300/com.tibco.bw.palette.shared-6.2.1300.jar \
-          -DgroupId=com.tibco.plugins \
-          -DartifactId=com.tibco.bw.palette.shared \
-          -Dversion=6.2.1300 \
-          -Dpackaging=jar
-
+          mvn install:install-file \
+            -Dfile=C:\Users\ndey\.m2\repository\com\tibco\plugins\com.tibco.bw.palette.shared\6.2.1300\com.tibco.bw.palette.shared-6.2.1300.jar \
+            -DgroupId=com.tibco.plugins \
+            -DartifactId=com.tibco.bw.palette.shared \
+            -Dversion=6.2.1300 \
+            -Dpackaging=jar
 
           
     - name: Build and Package BW6 Application
